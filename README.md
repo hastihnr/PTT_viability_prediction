@@ -36,14 +36,14 @@ Five breast cancer cell lines are supported: **MCF7**, **MCF10DCIS**, **MDA-MB-2
 │   ├── mcf10/
 │   ├── hs578t/
 │   └── pdx/
-└── output figures/                # Auto-created by notebook 2 to store SVG/PNG outputs
+└── output figures/                # Auto-created by notebook to store SVG/PNG outputs
 ```
 
 ---
 
 ## Notebooks
 
-### `1_rf_nn_classifier.ipynb` — ML Classification Pipeline
+### `ptt_rf_nn_classifier.ipynb` — ML Classification Pipeline
 
 | Section | Description |
 |---------|-------------|
@@ -89,7 +89,7 @@ The notebooks expect per-cell-line CSV files are in the respective folders.
 | `Energy_day0/1/2` | GLCM energy |
 | `Correlation_day0/1/2` | GLCM correlation |
 | `Equivalent Diameter (pix)_day0/1/2` | Equivalent circular diameter |
-| `Normalised alb` | Normalised metabolic activity (%) — used in EDA notebook only |
+| `Normalised alb` | Normalised metabolic activity (%) |
 
 
 ---
@@ -111,14 +111,14 @@ Open `ptt_rf_nn_classifier.ipynb` and update the **Configuration** cell (Section
 # Single cell-line mode (internal 75/25 split):
 CROSS_DATASET_MODE = False
 CELL_LINE_CSVS = {
-    "MCF7": "data/mcf7/combined_immediate_days.csv",
+    "MCF7": "data/0h NP incubation/MCF7.csv",
     # add further cell lines as needed
 }
 
 # Cross-dataset mode (train on one CSV, test on another):
 CROSS_DATASET_MODE = True
-TRAIN_CSV = "data/mcf7/combined_immediate_days.csv"
-TEST_CSV  = "data/pdx/combined_immediate_days.csv"
+TRAIN_CSV = ""data/0h NP incubation/MDAMB231.csv"
+TEST_CSV  = "data/0h NP incubation/PDX.csv"
 ```
 
 Then **Run All Cells** (`Kernel → Restart & Run All`).
