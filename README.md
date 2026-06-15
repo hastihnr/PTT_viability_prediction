@@ -26,7 +26,7 @@ Five breast cancer cell lines are supported: **MCF7**, **MCF10DCIS**, **MDA-MB-2
 
 ```
 .
-├── 1_rf_nn_classifier.ipynb       # Main ML pipeline (RF + NN, IT50, visualisations)
+├── ptt_rf_nn_classifier.ipynb       # Main ML pipeline (RF + NN, IT50, visualisations)
 ├── requirements.txt               # Python dependencies
 ├── LICENSE                        # MIT licence
 ├── data/                          # ← Place your CSV files here (see Data section below)
@@ -71,8 +71,7 @@ Five breast cancer cell lines are supported: **MCF7**, **MCF10DCIS**, **MDA-MB-2
 
 ## Data
 
-The notebooks expect per-cell-line CSV files produced by `2_data_exploration.ipynb`
-(via the `combined_immediate_days.csv` / `combined_incubate_days.csv` export step).
+The notebooks expect per-cell-line CSV files are in the respective folders.
 
 **Expected columns (subset):**
 
